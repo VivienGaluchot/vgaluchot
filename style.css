@@ -2,17 +2,66 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* main blocks */
+
 body {
-    text-align: center;
+    margin: 0;
+    background-color: #123;
+    color: white;
 }
 
-.logo-box {
-    text-align: left;
-    margin: .8rem;
+header, content, footer {
+    display: block;
+    padding: 1rem;
+}
+
+header {
+    border-bottom: 1px #FFFA solid;
+}
+
+content {
+    background-color: #345;
+}
+
+/* nav */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    --nav-el-margin: 1rem;
+    margin: calc(-1 * var(--nav-el-margin) / 2);
+    font-weight: 300;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: calc(var(--nav-el-margin) / 2);
+    /* border: 1px solid white; */
+}
+
+nav ul li a {
+    display: flex;
+}
+
+.nav-link {
+    padding: .5rem;
+}
+
+/* logo */
+
+.nav-logo {
+    font-family: 'Roboto Slab', serif;
+    margin: -.2rem;
+    text-decoration: none;
+}
+
+.nav-logo:hover {
+    color: white;
 }
 
 .logo {
-    display: inline-block;
     vertical-align: bottom;
     width: 3rem;
     height: 3rem;
@@ -24,7 +73,6 @@ body {
 }
 
 .logo-next {
-    font-family: 'Roboto Slab', serif;
     font-size: 1.2rem;
     line-height: 1.5rem;
     display: inline-block;
@@ -32,11 +80,8 @@ body {
     margin: .2rem;
 }
 
-.logo-next.dark {
-    color: #420024;
-}
-
 .title {
+    font-weight: 500;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -68,26 +113,25 @@ p {
     font-size: .9rem;
 }
 
-.dark {
-    border: 1px solid #111;
-    background-color: #111;
-    color: white;
-}
-
 a {
-    color: black;
+    border-radius: .1rem;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: .1s;
+    transition-timing-function: ease-in;
 }
 
 a:hover {
-    color: white;
-    background-color: black;
+    text-decoration: underline;
 }
 
-.dark a {
-    color: white;
+a:focus, a:hover {
+    background-color: #FFF3;
 }
 
-.dark a:hover {
-    color: black;
-    background-color: white;
+a:active {
+    background-color: #FFF4;
+    box-shadow: 0 0 0 .2rem #FFF4;
 }
