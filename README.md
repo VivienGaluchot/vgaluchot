@@ -1,7 +1,7 @@
 # vgaluchot
 
-Logo repository
+Personal website repository
 
-# Demo
+# live version
 
 https://viviengaluchot.github.io/vgaluchot/index.html
