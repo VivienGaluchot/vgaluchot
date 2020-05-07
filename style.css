@@ -84,6 +84,12 @@ nav ul li a {
     align-items: center;
 }
 
+@media (max-width: 600px) {
+    .nav-logo {
+        width: 100%;
+    }
+}
+
 .nav-logo:hover, .nav-logo:focus, .nav-logo:active {
     text-decoration: none;
     background: none;
@@ -154,10 +160,6 @@ a:active {
     margin-bottom: 1rem;
 }
 
-.quote-box .author {
-    color: #FFF8;
-}
-
 .quote-box .quote {
     margin: 0;
     font-size: 1.5rem;
@@ -165,6 +167,16 @@ a:active {
     padding: 1rem;
     border: 1px solid var(--color);
     color: var(--color);
+}
+
+@media (max-width: 600px) {
+    .quote-box .quote {
+        font-size: 1.2rem;
+    }
+}
+
+.quote-box .author {
+    color: #FFF8;
 }
 
 /* sections */
@@ -175,7 +187,14 @@ content {
 }
 
 section {
-    margin: 3rem;
+    margin: 3rem auto;
+    max-width: 1280px;
+}
+
+@media (max-width: 600px) {
+    section {
+        margin: 2rem auto;
+    }
 }
 
 section.quote {
@@ -200,6 +219,7 @@ section h3 {
 }
 
 .flex-box {
+    flex-grow: 1;
     background-color: #FFF1;
     margin: .5rem;
     border: 1px solid var(--accent-back-color);
