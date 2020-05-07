@@ -1,15 +1,26 @@
 :root {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
-    --back-color: rgb(17, 21, 34);
+    --color: #FFF;
+    --a-color: hsl(210, 100%, 73%);
+    --color-muted: #FFF8;
+    --back-color: hsl(210, 54%, 10%);
+    --accent-color: hsl(210, 100%, 100%);
+    --accent-back-color: hsl(210, 100%, 5%);
 }
 
 /* main blocks */
 
-body {
+html, body {
+    height: 100%;
     margin: 0;
     background-color: var(--back-color);
-    color: #FFF;
+    color: var(--color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 header, content, footer {
@@ -17,8 +28,21 @@ header, content, footer {
     padding: 1.5rem;
 }
 
+content {
+    flex-grow: 1;
+}
+
 footer {
     text-align: center;
+    color: var(--color-muted);
+    --a-color: white;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: .3rem 0;
 }
 
 /* nav */
@@ -31,6 +55,7 @@ nav ul {
     --nav-el-margin: 1rem;
     margin: calc(-1 * var(--nav-el-margin) / 2);
     font-weight: 300;
+    --a-color: white;
 }
 
 nav ul li {
@@ -98,7 +123,7 @@ nav ul li a {
 
 a {
     border-radius: .2rem;
-    color: white;
+    color: var(--a-color);
     font-weight: 700;
     text-decoration: none;
     transition-property: all;
@@ -126,25 +151,47 @@ a:active {
     display: inline-block;
     font-family: 'Roboto Mono', monospace;
     text-align: left;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .quote-box .author {
-    color: #FFF5;
+    color: #FFF8;
 }
 
 .quote-box .quote {
     margin: 0;
-    font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     border-radius: 0 1rem 1rem 1rem;
     padding: 1rem;
-    border: 1px solid #FFF;
-    background-color: #FFFC;
-    color: var(--back-color);
+    border: 1px solid var(--color);
+    color: var(--color);
 }
 
 /* sections */
+
+content {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin: 3rem;
+}
+
+section.quote {
+    text-align: center;
+}
+
+section h3 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-weight: lighter;
+    margin: 0;
+    padding: 1rem;
+    color: var(--color-muted);
+}
+
+/* flex-container */
 
 .flex-container {
     display: flex;
@@ -154,33 +201,49 @@ a:active {
 
 .flex-box {
     background-color: #FFF1;
-    flex-grow: 0;
-    margin: .2rem;
+    margin: .5rem;
+    border: 1px solid var(--accent-back-color);
+    border-radius: .2rem;
+}
+
+.flex-box .title, .flex-box .title h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+    letter-spacing: .05rem;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
 }
 
 .flex-box .title {
-    padding: 1rem 1rem .5rem 1rem;
-    margin: 0;
-    color: #FFF8;
-    background-color: #FFF1;
-    border-bottom: 1px solid #FFF1;
-    font-size: 1rem;
-    font-weight: 300;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    color: var(--accent-color);
+    background-color: var(--accent-back-color);
+}
+
+.flex-box .title .timestamp {
+    color: var(--color-muted);
+    font-size: .8rem;
 }
 
 .flex-box .content {
-    padding: 1rem;
+    padding: 2rem;
 }
 
-section p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin: 0;
-    padding: .3rem 0;
+/* share */
+
+footer .share {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
 }
 
-/* utils */
-
-.text-center {
-    text-align: center;
+footer .share>* {
+    padding: .6rem;
 }
