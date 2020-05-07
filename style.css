@@ -1,13 +1,14 @@
 :root {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
+    --back-color: rgb(17, 21, 34);
 }
 
 /* main blocks */
 
 body {
     margin: 0;
-    background-color: #112;
+    background-color: var(--back-color);
     color: #FFF;
 }
 
@@ -38,31 +39,27 @@ nav ul li {
     margin: calc(var(--nav-el-margin) / 2);
 }
 
-nav ul li.grow {
-    flex-grow: 1;
-}
-
 nav ul li a {
+    padding: .5rem;
     display: flex;
     align-items: center;
 }
 
 .nav-link {
-    padding: .5rem;
+    flex-grow: 0;
 }
 
 /* logo */
 
 .nav-logo {
+    flex-grow: 1;
     font-family: 'Roboto Slab', serif;
     margin: -.2rem;
     text-decoration: none;
     align-items: center;
 }
 
-.nav-logo:hover,
-.nav-logo:focus,
-.nav-logo:active {
+.nav-logo:hover, .nav-logo:focus, .nav-logo:active {
     text-decoration: none;
     background: none;
     box-shadow: none;
@@ -139,9 +136,12 @@ a:active {
 .quote-box .quote {
     margin: 0;
     font-weight: 300;
+    font-size: 1.3rem;
     border-radius: 0 1rem 1rem 1rem;
     padding: 1rem;
-    border: 1px solid #FFF5;
+    border: 1px solid #FFF;
+    background-color: #FFFC;
+    color: var(--back-color);
 }
 
 /* sections */
@@ -152,27 +152,35 @@ a:active {
     justify-content: center;
 }
 
-.flex-container section {
-    padding: 2rem;
-    background-color: #FFF2;
-    flex-grow: 1;
+.flex-box {
+    background-color: #FFF1;
+    flex-grow: 0;
+    margin: .2rem;
+}
+
+.flex-box .title {
+    padding: 1rem 1rem .5rem 1rem;
+    margin: 0;
+    color: #FFF8;
+    background-color: #FFF1;
+    border-bottom: 1px solid #FFF1;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.flex-box .content {
+    padding: 1rem;
 }
 
 section p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     margin: 0;
     padding: .3rem 0;
-    text-align: justify;
-}
-
-section h2 {
-    margin-top: 0;
-    color: #FFF8;
-    font-size: 1.1rem;
 }
 
 /* utils */
 
 .text-center {
     text-align: center;
-
 }
