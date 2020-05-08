@@ -4,7 +4,7 @@
     --color: #FFF;
     --a-color: hsl(210, 100%, 73%);
     --color-muted: #FFF8;
-    --back-color: hsl(210, 54%, 10%);
+    --back-color: hsl(209, 54%, 12%);
     --accent-color: hsl(210, 100%, 100%);
     --accent-back-color: hsl(210, 100%, 5%);
 }
@@ -52,6 +52,7 @@ p {
 nav ul {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     margin: 0;
     padding: 0;
     --nav-el-margin: 1rem;
@@ -61,19 +62,21 @@ nav ul {
 }
 
 nav ul li {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-block;
     margin: calc(var(--nav-el-margin) / 2);
-}
-
-nav ul li a {
-    padding: .5rem;
-    display: flex;
-    align-items: center;
+    vertical-align: middle;
 }
 
 .nav-link {
     flex-grow: 0;
+}
+
+.nav-link>a {
+    padding: .5rem;
+}
+
+.nav-box {
+    color: var(--color-muted);
 }
 
 /* logo */
@@ -85,6 +88,12 @@ nav ul li a {
     margin: -.2rem;
     text-decoration: none;
     align-items: center;
+}
+
+.nav-logo>a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
 }
 
 @media (max-width: 600px) {
@@ -168,7 +177,6 @@ a:active {
     font-size: 1.5rem;
     border-radius: 0 1rem 1rem 1rem;
     padding: 1rem;
-    /* border: 1px solid var(--color); */
     background-color: #FFF1;
     color: var(--color);
     border: 2px solid var(--accent-back-color);
@@ -181,7 +189,7 @@ a:active {
 }
 
 .quote-box .author {
-    color: #FFF8;
+    color: var(--color-muted);
 }
 
 /* sections */
