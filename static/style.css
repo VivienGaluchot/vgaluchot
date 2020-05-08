@@ -24,12 +24,12 @@ body {
 }
 
 header, content, footer {
-    display: block;
     padding: 1.5rem;
 }
 
 content {
     flex-grow: 1;
+    flex-basis: auto;
 }
 
 footer {
@@ -79,6 +79,7 @@ nav ul li a {
 
 .nav-logo {
     flex-grow: 1;
+    flex-basis: auto;
     font-family: 'Roboto Slab', serif;
     margin: -.2rem;
     text-decoration: none;
@@ -223,6 +224,7 @@ section h3 {
 
 .flex-box {
     flex-grow: 1;
+    flex-basis: auto;
     background-color: #FFF1;
     margin: .5rem;
     border: 2px solid var(--accent-back-color);
