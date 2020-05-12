@@ -41,10 +41,13 @@ footer {
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin: 0;
     padding: .3rem 0;
+}
+
+b {
+    font-weight: bold;
 }
 
 /* nav */
@@ -203,21 +206,20 @@ content {
 }
 
 section {
-    margin: 2rem auto;
+    margin: 1rem auto;
     max-width: 1280px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
     section {
-        margin: 2rem auto;
+        margin: .5rem 0;
     }
 }
 
-section {
-    text-align: center;
-}
-
-section h3 {
+section>h2 {
+    font-size: 1.2rem;
     font-family: 'Roboto Slab', serif;
     text-align: center;
     font-weight: lighter;
@@ -243,33 +245,65 @@ section h3 {
     border-radius: .2rem;
 }
 
-.flex-box .title, .flex-box .title h2 {
-    font-family: 'Roboto Slab', serif;
-    font-weight: lighter;
-    letter-spacing: .05rem;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-}
-
 .flex-box .title {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1rem;
     color: var(--accent-color);
     background-color: var(--accent-back-color);
+}
+
+.flex-box .title h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+    letter-spacing: .05rem;
+    padding: 1rem;
+    margin: 0;
+    color: var(--accent-color);
+    font-size: 1rem;
 }
 
 .flex-box .title .timestamp {
     color: var(--color-muted);
     font-size: .8rem;
+    padding: 1rem;
 }
 
 .flex-box .content {
     padding: 2rem;
     text-align: left;
+}
+
+.flex-box .content h3 {
+    font-size: 1.1rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+    margin: 1rem 0 .5rem 0;
+}
+
+.flex-box .content h3:first-of-type {
+    margin-top: 0;
+}
+
+.flex-box.blank {
+    background: transparent;
+    border: none;
+}
+
+.flex-box.blank .title {
+    color: var(--color);
+    background: transparent;
+}
+
+.flex-box.blank .title h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding-bottom: 0;
+}
+
+.flex-box.blank .content {
+    padding: 1rem;
 }
 
 /* share */
