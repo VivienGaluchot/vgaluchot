@@ -2,7 +2,7 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     --color: #FFF;
-    --a-color: hsl(210, 100%, 73%);
+    --a-color: hsl(192, 100%, 75%);
     --color-muted: #FFF8;
     --back-color: hsl(209, 54%, 12%);
     --accent-color: hsl(210, 100%, 100%);
@@ -41,13 +41,15 @@ footer {
 }
 
 p {
-    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-weight: 400;
     margin: 0;
     padding: .3rem 0;
 }
 
 b {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 /* nav */
@@ -148,7 +150,7 @@ nav ul li {
 a {
     border-radius: .2rem;
     color: var(--a-color);
-    font-weight: 700;
+    font-weight: 400;
     text-decoration: none;
     transition-property: all;
     transition-duration: .1s;
@@ -206,7 +208,7 @@ content {
 }
 
 section {
-    margin: 1rem auto;
+    margin: 2rem auto;
     max-width: 1280px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -214,7 +216,7 @@ section {
 
 @media (max-width: 600px) {
     section {
-        margin: .5rem 0;
+        margin: 1rem 0;
     }
 }
 
@@ -222,7 +224,7 @@ section>h2 {
     font-size: 1.2rem;
     font-family: 'Roboto Slab', serif;
     text-align: center;
-    font-weight: lighter;
+    font-weight: 400;
     margin: 0;
     padding: 1rem;
     color: var(--color-muted);
@@ -243,6 +245,8 @@ section>h2 {
     margin: .5rem;
     border: 2px solid var(--accent-back-color);
     border-radius: .2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .flex-box .title {
@@ -273,6 +277,7 @@ section>h2 {
 .flex-box .content {
     padding: 2rem;
     text-align: left;
+    flex-grow: 1;
 }
 
 .flex-box .content h3 {
@@ -286,6 +291,22 @@ section>h2 {
     margin-top: 0;
 }
 
+.flex-box .picture {
+    width: 100%;
+    display: flex;
+}
+
+.flex-box .picture img {
+    width: 100%;
+    max-height: 10rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.flex-box .footer {
+    margin: -1rem 1rem 1rem 1rem;
+}
+
 .flex-box.blank {
     background: transparent;
     border: none;
@@ -294,16 +315,17 @@ section>h2 {
 .flex-box.blank .title {
     color: var(--color);
     background: transparent;
+    border-bottom: 1px solid var(--color-muted);
 }
 
 .flex-box.blank .title h2 {
-    font-size: 1.5rem;
+    padding: 1rem 0 .5rem 0;
+    font-size: 1.3rem;
     font-weight: normal;
-    padding-bottom: 0;
 }
 
 .flex-box.blank .content {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 /* share */
