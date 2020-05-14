@@ -1,5 +1,5 @@
 :root {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     --color: #FFF;
     --a-color: hsl(192, 100%, 75%);
@@ -56,6 +56,7 @@ a {
 /* nav */
 
 nav ul {
+    font-family: 'Roboto Slab', serif;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -93,7 +94,6 @@ nav ul li {
 .nav-logo {
     flex-grow: 1;
     flex-basis: auto;
-    font-family: 'Roboto Slab', serif;
     margin: -.2rem;
     text-decoration: none;
     align-items: center;
@@ -292,6 +292,10 @@ section>h2 {
     flex-grow: 1;
 }
 
+.flex-box .content .badges {
+    margin-bottom: 1rem;
+}
+
 .flex-box .content h3 {
     font-size: 1.1rem;
     font-family: 'Roboto Slab', serif;
@@ -345,6 +349,18 @@ section>h2 {
     font-size: .9rem;
     margin: -.5rem 0 1rem 0;
     text-align: left;
+}
+
+/* badges */
+
+.badge-keyword {
+    background-color: var(--color);
+    color: var(--back-color);
+    padding: .1rem .5rem;
+    border-radius: 1rem;
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* share */
