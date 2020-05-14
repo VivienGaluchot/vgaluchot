@@ -333,6 +333,7 @@ section>h2 {
     color: var(--color);
     background: transparent;
     border-bottom: 1px solid var(--color-muted);
+    padding: .5rem 0;
 }
 
 .flex-box.blank .title h2 {
