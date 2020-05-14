@@ -1,7 +1,7 @@
 :root {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    --color: #FFF;
+    --color: rgb(221, 221, 221);
     --a-color: hsl(192, 100%, 75%);
     --color-muted: #FFF8;
     --back-color: hsl(209, 54%, 12%);
@@ -339,6 +339,7 @@ section>h2 {
     padding: 1rem 0 .5rem 0;
     font-size: 1.3rem;
     font-weight: normal;
+    color: var(--color);
 }
 
 .flex-box.blank .content {
