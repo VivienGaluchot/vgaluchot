@@ -29,6 +29,15 @@ const local = (() => {
 
             element.innerHTML = typing(text, 0)
             window.setTimeout(update, 1000);
+        },
+
+        installAnchor(element) {
+            console.log(element);
+            let link = document.createElement("a");
+            link.setAttribute("href", "#" + element.id);
+            link.innerHTML = "<i class=\"fas fa-link\"></i>";
+            link.classList.add("anchor");
+            element.prepend(link);
         }
     };
 })();
@@ -36,5 +45,9 @@ const local = (() => {
 window.addEventListener("DOMContentLoaded", (event) => {
     for (let el of document.getElementsByClassName("quote")) {
         local.installTypingAnimation(el);
+    }
+
+    for (let el of document.getElementsByClassName("anchorable")) {
+        local.installAnchor(el);
     }
 });
