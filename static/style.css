@@ -443,6 +443,12 @@ section>h2 {
 
 /* badges */
 
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -.1rem;
+}
+
 .badge-keyword {
     --color: var(--secondary-text);
     --background-color: var(--secondary);
@@ -452,6 +458,8 @@ section>h2 {
     font-size: .9rem;
     font-weight: 300;
     font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    margin: .1rem;
 }
 
 /* share */
