@@ -1,7 +1,5 @@
 # vgaluchot
 
-Personal website repository
+Personal website repository.
 
-# live version
-
-https://vgaluchot.dev
+Static version not in use, migrated to https://github.com/VivienGaluchot/vgaluchot-go-srv.
